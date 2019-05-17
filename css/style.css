@@ -5,7 +5,6 @@
          url('amiri-slanted-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body{
@@ -13,7 +12,8 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Cinzel Decorative', sans-serif;
-	max-width: 1920px;
+	font-size: 16px;
+	width: 1920px;
 	margin: 0 auto;
 }
 
@@ -24,6 +24,31 @@ p{
 h2{
 	font-size: 72px;
 	font-weight: 400;
+}
+
+
+/*HEADER*/
+
+
+.header{
+position: relative;
+height: 1064px;
+margin: 0 auto;
+}
+
+header:after{
+	content: "";
+	background-image: url(../img/header-bg.jpg); 
+	background-repeat: no-repeat;
+	background-position: top center;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity : 0.4;
+	z-index: -10;
 }
 
 .ba-container{
@@ -37,40 +62,9 @@ h2{
     transform: translate(-50%, 0);
 }
 
-
-/*HEADER*/
-
-
-.header{
-position: relative;
-height: 1064px;
-margin: 0 auto;
-}
-
-
-
-header:after{
-	content: "";
-	background-image: url(../img/header-bg.jpg); 
-	background-repeat: no-repeat;
-/*	-webkit-background-size: 100% auto;
-	     -o-background-size: 100% auto;
-	        background-size: 100% auto;*/
-	background-position: top center;
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	opacity : 0.4;
-	z-index: -10;
-}
-
 .logo{
 	height: 165px;
 	margin-top: 121px;
-
 }
 
 .header h1{
@@ -131,7 +125,6 @@ main{
 	     -o-background-size: 1920px;
 	        background-size: 1920px;
 	height: 5000px;
-	z-index: -5;
 }
 
 
@@ -167,15 +160,19 @@ main{
 	position: absolute;
 	top: -40px;
 	right: 0;
-	z-index: -3;
+	z-index: 10;
+	width: 30%;
 }
 
 .box1 img:last-of-type{
 	position: absolute;
 	top: 48px;
-	left: 1220px;
-	z-index: 1;
+	left: 63.5%;
+	z-index: 40;
 	height: 19%;
+	-webkit-border-radius:10%;
+	        border-radius:10%;
+	box-shadow: 0 50px 20px -20px rgba(0, 0, 0, 0.25), inset 0 -25px 20px -20px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -184,12 +181,17 @@ main{
 
 .box2{
 	background-image: url(../img/box-bg.jpg);
+	-webkit-background-size: auto;
+	     -o-background-size: auto;
+	        background-size: auto;
+	background-position: top right;
+	background-repeat: no-repeat; 
 	height: 495px;
-	width: 1650px;
+	width: 80%;
 	position: absolute;
 	top: 360px;
 	left: 0;
-	z-index: -2;
+	z-index: 20;
 	box-shadow: 40px 0 80px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -225,11 +227,11 @@ main{
 	text-transform: uppercase;	
 	outline-style: none;
 	background-color: #272a18;
-/*	-webkit-transition: all 0.5s ease;
-	   -moz-transition: all 0.5s ease;
-	    -ms-transition: all 0.5s ease;
-	     -o-transition: all 0.5s ease;
-	        transition: all 0.5s ease;*/
+	-webkit-transition: font-size 0.5s ease, background-color 0.5s ease;
+	   -moz-transition: font-size 0.5s ease, background-color 0.5s ease;
+	    -ms-transition: font-size 0.5s ease, background-color 0.5s ease;
+	     -o-transition: font-size 0.5s ease, background-color 0.5s ease;
+	        transition: font-size 0.5s ease, background-color 0.5s ease;
 	left: 0;
 	margin: 50px 0;
 	text-align: center;
@@ -237,27 +239,28 @@ main{
 }
 
 .btn:hover{
-	font-size: 18px;
+	font-size: 17px;
+	background-color: #1A190E;
+	border: 1px solid #1A190E;
 }
-
 
 
 /*BOX3*/
 
 
-
 .box3{
 	height: 885px;
-	width: 1920px;
+	width: 100%;
 	background-image: url(../img/man-beer-1.jpg); 
 	background-repeat: no-repeat;
-	-webkit-background-size: auto ;
-	     -o-background-size: auto ;
-	        background-size: auto ;
-	z-index: -1;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	z-index: 30;
 	color: #1a1c0f;
 	position: relative;
 	display: inline-block;
+	background-position: top center;	
 }
 
 .box3 h2{
@@ -265,8 +268,8 @@ main{
 	font-size: 60px;
 	font-weight: 900;
 	color: #1a1c0f;
-	margin-top: 324px;
-	margin-left: 1182px;
+	margin-top: 16.5%;
+	margin-left: 62%;
 }
 
 
@@ -276,11 +279,12 @@ main{
 .box4{
 	height: 857px;
 	position: relative;
+	display: inline-flex;
 }
 
 .box4__text{
 	height: 867px;
-	width: 680px;
+	width: 36%;
 	margin-top: 0;
 	margin-left: 155px;
 	display: inline-block;
@@ -304,7 +308,7 @@ main{
 }
 
 .box4 img{
-	width: 981px;
+	width: 50%;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -333,4 +337,14 @@ main{
 .box5_btn{
 	display: inline-block;
 	background-color: #1A190E;
+	-webkit-transition: font-size 0.5s ease, background-color 0.5s ease;
+	   -moz-transition: font-size 0.5s ease, background-color 0.5s ease;
+	    -ms-transition: font-size 0.5s ease, background-color 0.5s ease;
+	     -o-transition: font-size 0.5s ease, background-color 0.5s ease;
+	        transition: font-size 0.5s ease, background-color 0.5s ease;
+}
+
+.box5_btn:hover{
+	font-size: 17px;
+	background-color: #404429;
 }
